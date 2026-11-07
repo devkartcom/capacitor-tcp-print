@@ -1,6 +1,6 @@
 {
-  "name": "@aybinv7/capacitor-tcp-print",
-  "version": "0.2.0",
+  "name": "@devkartcom/capacitor-tcp-print",
+  "version": "0.2.1",
   "description": "Minimal Capacitor plugin that sends raw printer bytes (ESC/POS etc.) to a LAN printer over a TCP socket (RAW/JetDirect, typically port 9100), and discovers printers by probing the local /24 for that port. Stateless connect-per-print: open, write, close.",
   "main": "dist/plugin.cjs.js",
   "module": "dist/esm/index.js",
@@ -14,11 +14,11 @@
     "CapacitorTcpPrint.podspec",
     "Package.swift"
   ],
-  "author": "devsaranweb",
+  "author": "Devkart Technologies LLP",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/devsaranweb/capacitor-tcp-print.git"
+    "url": "git+https://github.com/devkartcom/capacitor-tcp-print.git"
   },
   "keywords": [
     "capacitor",
@@ -59,5 +59,9 @@
     "android": {
       "src": "android"
     }
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/devkartcom/capacitor-tcp-print/issues"
+  },
+  "homepage": "https://github.com/devkartcom/capacitor-tcp-print#readme"
 }

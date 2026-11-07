@@ -1,4 +1,4 @@
-# @aybinv7/capacitor-tcp-print
+# @devkartcom/capacitor-tcp-print
 
 Minimal Capacitor plugin that sends raw printer bytes (ESC/POS etc.) to a LAN
 printer over a TCP socket (RAW / JetDirect printing, typically port 9100).
@@ -8,7 +8,7 @@ flushes and closes. There is deliberately no session API — thermal printers
 accept a connection, spool, print; holding a socket open buys nothing.
 
 ```ts
-import { TcpPrint } from '@aybinv7/capacitor-tcp-print';
+import { TcpPrint } from '@devkartcom/capacitor-tcp-print';
 
 await TcpPrint.print({
   host: '192.168.1.50',
@@ -76,3 +76,29 @@ discovery uses `NetworkInterface`, **not** `ConnectivityManager`, specifically
 so it adds no permission to the host apps. Socket I/O runs on a dedicated
 background thread, and sweeps run on their own executor so a discovery scan
 can never queue behind (or in front of) a print.
+
+## Install
+
+```sh
+npm i github:devkartcom/capacitor-tcp-print#v0.2.1
+npx cap sync
+```
+
+`dist/` is committed, so installing from git needs no build step.
+
+## About Devkart
+
+Built and maintained by [Devkart Technologies LLP](https://devkart.com): custom software,
+SaaS platforms and MVPs. We run this plugin in production in our own two products:
+
+- **[Supaorder](https://www.supaorder.com)**: white-label online ordering for restaurants.
+  Orders go straight into Clover, Square or Toast, and restaurants pay a flat monthly fee
+  instead of a commission.
+- **[SuperApp](https://www.superapphq.com)**: a white-label multi-vertical marketplace
+  platform for food delivery, retail and supermarkets.
+
+Questions or issues: open a GitHub issue, or write to contact@devkart.com.
+
+## License
+
+MIT © Devkart Technologies LLP
